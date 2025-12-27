@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Securely Storing Passwords in a Database",
+    "description": "Learn best practices for securely storing user passwords using hashing, salting, and modern encryption techniques.",
+    "platform": "DEV.to",
+    "platformShort": "dev",
+    "url": "https://dev.to/aryan_shourie/securely-storing-passwords-in-a-database-25nd"
+  },
+  {
+    "title": "Git Hooks: Automating Workflows in Git",
+    "description": "Discover how to automate your Git workflows using hooks for pre-commit checks, linting, and testing.",
+    "platform": "DEV.to",
+    "platformShort": "dev",
+    "url": "https://dev.to/aryan_shourie/git-hooks-automating-workflows-in-git-3bpo"
+  },
+  {
+    "title": "Secure Tunneling Explained: Ngrok vs Cloudflared",
+    "description": "A comprehensive comparison of ngrok and cloudflared for secure tunneling and exposing local servers.",
+    "platform": "DEV.to",
+    "platformShort": "dev",
+    "url": "https://dev.to/aryan_shourie/secure-tunneling-explained-ngrok-vs-cloudflared-mcl"
+  },
+  {
+    "title": "Understanding JavaScript Naming Best Practices",
+    "description": "Master JavaScript naming conventions for variables, functions, and classes to write clean, maintainable code.",
+    "platform": "DEV.to",
+    "platformShort": "dev",
+    "url": "https://dev.to/aryan_shourie/understanding-javascript-naming-best-practices-29i3"
+  },
+  {
+    "title": "The SCP Command and How to Use It",
+    "description": "Learn to securely transfer files between remote servers using the SCP command in Linux.",
+    "platform": "DEV.to",
+    "platformShort": "dev",
+    "url": "https://dev.to/aryan_shourie/the-scp-command-and-how-to-use-it-3b9m"
+  },
+  {
+    "title": "Useful JavaScript Tips and Tricks",
+    "description": "Discover powerful JavaScript tips and tricks that can make your code more efficient and elegant.",
+    "platform": "DEV.to",
+    "platformShort": "dev",
+    "url": "https://dev.to/aryan_shourie/useful-javascript-tips-and-tricks-that-you-may-not-be-aware-of-32af"
+  },
+  {
+    "title": "The JavaScript History API",
+    "description": "Explore the History API for manipulating browser session history and creating single-page applications.",
+    "platform": "DEV.to",
+    "platformShort": "dev",
+    "url": "https://dev.to/aryan_shourie/the-javascript-history-api-2e0d"
+  },
+  {
+    "title": "Introduction to HTML Web Components",
+    "description": "Learn how to create reusable custom HTML elements using Web Components, Shadow DOM, and templates.",
+    "platform": "DEV.to",
+    "platformShort": "dev",
+    "url": "https://dev.to/aryan_shourie/introduction-to-html-web-components-3ijm"
+  },
+  {
+    "title": "What is Linting and How to Use a Linter Tool",
+    "description": "Understand the importance of code linting and how to integrate linter tools into your development workflow.",
+    "platform": "DEV.to",
+    "platformShort": "dev",
+    "url": "https://dev.to/aryan_shourie/what-is-linting-and-how-to-use-a-linter-tool-524l"
+  },
+  {
+    "title": "How to Use Relative URL in CSS File",
+    "description": "Learn about relative URLs in CSS files and understand their resolution relative to the CSS file location.",
+    "platform": "GeeksforGeeks",
+    "platformShort": "gfg",
+    "url": "https://www.geeksforgeeks.org/css/how-to-use-relative-url-in-css-file-and-what-location-is-it-relative-to/"
+  },
+  {
+    "title": "What is Reselect and How Does it Work in ReactJS",
+    "description": "Discover how Reselect helps optimize React applications through memoized selectors and efficient state management.",
+    "platform": "GeeksforGeeks",
+    "platformShort": "gfg",
+    "url": "https://www.geeksforgeeks.org/reactjs/what-is-reselect-and-how-does-it-works-in-reactjs/"
+  },
+  {
+    "title": "React MUI Hidden Layout",
+    "description": "Master responsive design in React using Material-UI's Hidden component for conditional rendering across breakpoints.",
+    "platform": "GeeksforGeeks",
+    "platformShort": "gfg",
+    "url": "https://www.geeksforgeeks.org/reactjs/react-mui-hidden-layout/"
+  },
+  {
+    "title": "How Relay is Different from Redux",
+    "description": "Compare Relay and Redux to understand their different approaches to state management in React applications.",
+    "platform": "GeeksforGeeks",
+    "platformShort": "gfg",
+    "url": "https://www.geeksforgeeks.org/reactjs/how-relay-is-different-from-redux/"
+  },
+  {
+    "title": "React MUI Theming",
+    "description": "Learn how to customize and implement theming in React applications using Material-UI's powerful theming system.",
+    "platform": "GeeksforGeeks",
+    "platformShort": "gfg",
+    "url": "https://www.geeksforgeeks.org/reactjs/react-mui-theming/"
+  },
+  {
+    "title": "How to Deploy React Native Application on Play Store",
+    "description": "Step-by-step guide to build, prepare, and deploy your React Native app to the Google Play Store.",
+    "platform": "GeeksforGeeks",
+    "platformShort": "gfg",
+    "url": "https://www.geeksforgeeks.org/android/how-to-deploy-react-native-application-on-play-store/"
+  }
+]
