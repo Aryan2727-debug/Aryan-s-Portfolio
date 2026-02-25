@@ -1,5 +1,54 @@
 [
   {
+    "title": "How I Would Learn Frontend Development",
+    "description": "A comprehensive roadmap and learning strategy for aspiring frontend developers based on my experience.",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/how-i-would-learn-frontend-development"
+  },
+  {
+    "title": "HTML You Think You Know But Probably Don't",
+    "description": "Discover lesser-known HTML features and semantic elements that can improve your web development skills.",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/html-you-think-you-know-but-probably"
+  },
+  {
+    "title": "CSS Mistakes I Made in My First 2 Years",
+    "description": "Learn from my CSS mistakes and avoid common pitfalls that many developers face when starting out.",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/css-mistakes-i-made-in-my-first-2"
+  },
+  {
+    "title": "JavaScript Concepts That Actually Matter",
+    "description": "Focus on the JavaScript concepts that will make the biggest impact in your day-to-day development work.",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/javascript-concepts-that-actually"
+  },
+  {
+    "title": "How Browsers Render a Web Page",
+    "description": "Understand the browser rendering pipeline from HTML parsing to painting pixels on the screen.",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/how-browsers-render-a-web-page"
+  },
+  {
+    "title": "Debounce vs Throttle: Real UI Use Cases",
+    "description": "Learn when to use debounce vs throttle with practical examples from real user interface scenarios.",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/debounce-vs-throttle-real-ui-use"
+  },
+  {
+    "title": "Common Accessibility Mistakes in Web Development",
+    "description": "Avoid these common accessibility mistakes to make your web applications more inclusive for all users.",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/common-accessibility-mistakes-in"
+  },
+  {
     "title": "Securely Storing Passwords in a Database",
     "description": "Learn best practices for securely storing user passwords using hashing, salting, and modern encryption techniques.",
     "platform": "DEV.to",
