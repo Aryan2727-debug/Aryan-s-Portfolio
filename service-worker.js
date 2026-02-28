@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aryan-portfolio-v3';
+const CACHE_NAME = 'aryan-portfolio-v4';
 
 // Assets to cache on install
 const ASSETS_TO_CACHE = [
@@ -69,7 +69,31 @@ self.addEventListener('activate', (event) => {
 });
 
 // Fetch event - serve from cache, fall back to network
+// Use network-first for articles.json to always get fresh content
 self.addEventListener('fetch', (event) => {
+  const url = new URL(event.request.url);
+  
+  // Network-first strategy for articles.json
+  if (url.pathname.endsWith('articles.json')) {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          // Cache the fresh response
+          const responseToCache = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
+          return response;
+        })
+        .catch(() => {
+          // Fall back to cache if offline
+          return caches.match(event.request);
+        })
+    );
+    return;
+  }
+
+  // Cache-first strategy for other assets
   event.respondWith(
     caches.match(event.request)
       .then((cachedResponse) => {
