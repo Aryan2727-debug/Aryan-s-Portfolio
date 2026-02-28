@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aryan-portfolio-v2';
+const CACHE_NAME = 'aryan-portfolio-v3';
 
 // Assets to cache on install
 const ASSETS_TO_CACHE = [
@@ -16,8 +16,9 @@ const ASSETS_TO_CACHE = [
   '/js/articles.json',
   '/images/favicon (24).ico',
   '/images/aryan-tux-image.jpg',
-  '/images/icon-192.svg',
-  '/images/icon-512.svg',
+  '/images/icon-180.png',
+  '/images/icon-192.png',
+  '/images/icon-512.png',
   '/images/screenshot-wide.svg',
   '/images/screenshot-mobile.svg',
   '/images/projects/p1.PNG',
