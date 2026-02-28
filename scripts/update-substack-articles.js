@@ -6,7 +6,13 @@ const RSS_FEED_URL = 'https://aryanshourie.substack.com/feed';
 const ARTICLES_JSON_PATH = path.join(__dirname, '..', 'js', 'articles.json');
 
 async function fetchSubstackArticles() {
-    const parser = new Parser();
+    const parser = new Parser({
+        headers: {
+            'User-Agent': 'Mozilla/5.0 (compatible; PortfolioBot/1.0; +https://www.aryanshourie.dev)',
+            'Accept': 'application/rss+xml, application/xml, text/xml, */*'
+        },
+        timeout: 10000
+    });
     const feed = await parser.parseURL(RSS_FEED_URL);
     
     return feed.items.map(item => ({
