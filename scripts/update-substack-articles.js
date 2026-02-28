@@ -1,18 +1,17 @@
 const fs = require('fs');
 const path = require('path');
 
-const RSS_FEED_URL = 'https://aryanshourie.substack.com/feed';
+// Use RSS2JSON proxy service (free tier: 10,000 requests/month)
+const SUBSTACK_FEED = 'https://aryanshourie.substack.com/feed';
+const RSS2JSON_API = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(SUBSTACK_FEED)}`;
 const ARTICLES_JSON_PATH = path.join(__dirname, '..', 'js', 'articles.json');
 
 async function fetchSubstackArticles() {
-    // Use native fetch with browser-like headers
-    const response = await fetch(RSS_FEED_URL, {
+    console.log('Using RSS2JSON proxy service...');
+    
+    const response = await fetch(RSS2JSON_API, {
         headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-            'Accept-Language': 'en-US,en;q=0.5',
-            'Connection': 'keep-alive',
-            'Upgrade-Insecure-Requests': '1'
+            'Accept': 'application/json'
         }
     });
 
@@ -20,55 +19,33 @@ async function fetchSubstackArticles() {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
     }
 
-    const xml = await response.text();
+    const data = await response.json();
     
-    // Parse RSS XML manually
-    const articles = [];
-    const itemRegex = /<item>([\s\S]*?)<\/item>/g;
-    let match;
-
-    while ((match = itemRegex.exec(xml)) !== null) {
-        const itemContent = match[1];
-        
-        const title = extractTag(itemContent, 'title');
-        const link = extractTag(itemContent, 'link');
-        const description = extractTag(itemContent, 'description');
-        
-        if (title && link) {
-            articles.push({
-                title: cleanText(title),
-                description: cleanDescription(description || 'Read more on Substack.'),
-                platform: 'Substack',
-                platformShort: 'substack',
-                url: link.trim()
-            });
-        }
+    if (data.status !== 'ok') {
+        throw new Error(`RSS2JSON error: ${data.message || 'Unknown error'}`);
     }
 
-    return articles;
-}
+    console.log(`RSS2JSON returned ${data.items.length} items`);
 
-function extractTag(content, tagName) {
-    // Handle CDATA sections
-    const cdataRegex = new RegExp(`<${tagName}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]><\\/${tagName}>`, 'i');
-    const cdataMatch = content.match(cdataRegex);
-    if (cdataMatch) return cdataMatch[1];
-
-    // Handle regular tags
-    const regex = new RegExp(`<${tagName}[^>]*>([\\s\\S]*?)<\\/${tagName}>`, 'i');
-    const match = content.match(regex);
-    return match ? match[1] : null;
+    return data.items.map(item => ({
+        title: cleanText(item.title),
+        description: cleanDescription(item.description || item.content || 'Read more on Substack.'),
+        platform: 'Substack',
+        platformShort: 'substack',
+        url: item.link
+    }));
 }
 
 function cleanText(text) {
+    if (!text) return '';
     return text
-        .replace(/<!\[CDATA\[|\]\]>/g, '')
         .replace(/<[^>]*>/g, '')
         .replace(/&amp;/g, '&')
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&quot;/g, '"')
         .replace(/&#39;/g, "'")
+        .replace(/&nbsp;/g, ' ')
         .replace(/\s+/g, ' ')
         .trim();
 }
