@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <!-- Background -->
+  <rect width="390" height="844" fill="#151515"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="390" height="60" fill="#222222"/>
+  <text x="195" y="40" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle">
+    <tspan fill="#ec1839" font-size="24">p</tspan>ortfolio
+  </text>
+  
+  <!-- Main content -->
+  <text x="195" y="180" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">Hello, my name is</text>
+  <text x="195" y="230" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ec1839" text-anchor="middle">Aryan Dev Shourie</text>
+  <text x="195" y="280" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">I am a Frontend Developer</text>
+  
+  <!-- Description -->
+  <text x="195" y="360" font-family="Arial, sans-serif" font-size="14" fill="#e9e9e9" text-anchor="middle">A detail-oriented Frontend</text>
+  <text x="195" y="385" font-family="Arial, sans-serif" font-size="14" fill="#e9e9e9" text-anchor="middle">Software Engineer dedicated to</text>
+  <text x="195" y="410" font-family="Arial, sans-serif" font-size="14" fill="#e9e9e9" text-anchor="middle">delivering seamless and visually</text>
+  <text x="195" y="435" font-family="Arial, sans-serif" font-size="14" fill="#e9e9e9" text-anchor="middle">engaging web applications.</text>
+  
+  <!-- Button -->
+  <rect x="115" y="500" width="160" height="50" rx="25" fill="#ec1839"/>
+  <text x="195" y="532" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Hire Me</text>
+  
+  <!-- Profile image placeholder -->
+  <rect x="95" y="580" width="200" height="200" rx="10" fill="#222222" stroke="#ec1839" stroke-width="3"/>
+  <text x="195" y="690" font-family="Arial, sans-serif" font-size="48" fill="#ec1839" text-anchor="middle">A</text>
+</svg>
