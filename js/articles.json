@@ -1,5 +1,12 @@
 [
   {
+    "title": "Event Loop Explained for Frontend Engineers",
+    "description": "How JavaScript scheduling actually affects UI performance",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/event-loop-explained-for-frontend"
+  },
+  {
     "title": "The 70% GTA Online Optimization — And Why Frontend Engineers Should Care",
     "description": "How thoughtful profiling, bottleneck analysis, and small changes drive massive performance impact in frontend applications.",
     "platform": "Substack",
