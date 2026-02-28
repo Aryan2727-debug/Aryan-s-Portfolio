@@ -1,0 +1,70 @@
+#!/bin/sh
+#
+# Pre-commit hook to ensure CACHE_NAME is updated when critical assets change
+# Install: copy this file to .git/hooks/pre-commit and make it executable
+
+# Files that require cache version bump when changed
+CRITICAL_PATTERNS="\.html$|\.css$|\.js$|\.png$|\.jpg$|\.jpeg$|\.ico$|\.svg$|\.webp$"
+
+# Files to exclude from check (these don't need cache bump)
+EXCLUDE_PATTERNS="service-worker\.js$|articles\.json$|update-substack-articles\.js$"
+
+# Get list of staged files
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
+
+if [ -z "$STAGED_FILES" ]; then
+    exit 0
+fi
+
+# Check if any critical files are being committed
+CRITICAL_FILES_CHANGED=false
+for file in $STAGED_FILES; do
+    # Skip excluded files
+    if echo "$file" | grep -qE "$EXCLUDE_PATTERNS"; then
+        continue
+    fi
+    
+    # Check if file matches critical patterns
+    if echo "$file" | grep -qE "$CRITICAL_PATTERNS"; then
+        CRITICAL_FILES_CHANGED=true
+        break
+    fi
+done
+
+# If no critical files changed, allow commit
+if [ "$CRITICAL_FILES_CHANGED" = false ]; then
+    exit 0
+fi
+
+# Check if service-worker.js is staged
+if ! echo "$STAGED_FILES" | grep -q "service-worker.js"; then
+    echo ""
+    echo "❌ COMMIT BLOCKED: Critical assets changed but service-worker.js was not updated!"
+    echo ""
+    echo "Changed files that require cache update:"
+    for file in $STAGED_FILES; do
+        if echo "$file" | grep -qE "$CRITICAL_PATTERNS" && ! echo "$file" | grep -qE "$EXCLUDE_PATTERNS"; then
+            echo "  - $file"
+        fi
+    done
+    echo ""
+    echo "Please update CACHE_NAME version in service-worker.js (e.g., v4 → v5)"
+    echo "Then stage the file: git add service-worker.js"
+    echo ""
+    exit 1
+fi
+
+# Check if CACHE_NAME was actually modified
+CACHE_NAME_CHANGED=$(git diff --cached service-worker.js | grep -E "^\+.*CACHE_NAME")
+
+if [ -z "$CACHE_NAME_CHANGED" ]; then
+    echo ""
+    echo "❌ COMMIT BLOCKED: service-worker.js is staged but CACHE_NAME version was not updated!"
+    echo ""
+    echo "Please increment the version in CACHE_NAME (e.g., 'aryan-portfolio-v4' → 'aryan-portfolio-v5')"
+    echo ""
+    exit 1
+fi
+
+echo "✅ Cache version updated - proceeding with commit"
+exit 0
