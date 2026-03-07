@@ -1,5 +1,12 @@
 [
   {
+    "title": "How to Think About State in Frontend Applications",
+    "description": "Why most frontend complexity comes from managing change",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/how-to-think-about-state-in-frontend"
+  },
+  {
     "title": "Event Loop Explained for Frontend Engineers",
     "description": "How JavaScript scheduling actually affects UI performance",
     "platform": "Substack",
