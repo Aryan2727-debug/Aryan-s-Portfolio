@@ -1,5 +1,12 @@
 [
   {
+    "title": "Why Debugging Frontend Applications Is Hard",
+    "description": "And why the problem is rarely where you first look",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/why-debugging-frontend-applications"
+  },
+  {
     "title": "How to Think About State in Frontend Applications",
     "description": "Why most frontend complexity comes from managing change",
     "platform": "Substack",
