@@ -1,5 +1,12 @@
 [
   {
+    "title": "Frontend Code That Looks Clean but Breaks at Scale",
+    "description": "Why simple solutions fail when real users and real data arrive",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/frontend-code-that-looks-clean-but"
+  },
+  {
     "title": "Why Debugging Frontend Applications Is Hard",
     "description": "And why the problem is rarely where you first look",
     "platform": "Substack",
