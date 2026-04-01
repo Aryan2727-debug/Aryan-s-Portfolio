@@ -1,5 +1,12 @@
 [
   {
+    "title": "Things I Learned Shipping Frontend Features",
+    "description": "Lessons that only make sense after your code reaches real users",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/things-i-learned-shipping-frontend"
+  },
+  {
     "title": "Frontend Code That Looks Clean but Breaks at Scale",
     "description": "Why simple solutions fail when real users and real data arrive",
     "platform": "Substack",
