@@ -1,5 +1,26 @@
 [
   {
+    "title": "React Reconciliation Explained Simply",
+    "description": "How React efficiently updates your UI without you noticing the magic",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/react-reconciliation-explained-simply"
+  },
+  {
+    "title": "Things I Learned Shipping Frontend Features",
+    "description": "Lessons that only make sense after your code reaches real users",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/things-i-learned-shipping-frontend"
+  },
+  {
+    "title": "Frontend Code That Looks Clean but Breaks at Scale",
+    "description": "Why simple solutions fail when real users and real data arrive",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/frontend-code-that-looks-clean-but"
+  },
+  {
     "title": "Why Debugging Frontend Applications Is Hard",
     "description": "And why the problem is rarely where you first look",
     "platform": "Substack",
