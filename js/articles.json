@@ -1,5 +1,12 @@
 [
   {
+    "title": "Where AI Helps — and Fails — Frontend Devs",
+    "description": "AI can write components in seconds. But can it think like an engineer?",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/where-ai-helps-and-fails-frontend"
+  },
+  {
     "title": "React Reconciliation Explained Simply",
     "description": "How React efficiently updates your UI without you noticing the magic",
     "platform": "Substack",
