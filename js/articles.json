@@ -1,5 +1,12 @@
 [
   {
+    "title": "Building a Strong Frontend Portfolio",
+    "description": "Your portfolio isn’t proof that you can code. It’s proof that someone should trust you to solve problems.",
+    "platform": "Substack",
+    "platformShort": "substack",
+    "url": "https://aryanshourie.substack.com/p/building-a-strong-frontend-portfolio"
+  },
+  {
     "title": "Where AI Helps — and Fails — Frontend Devs",
     "description": "AI can write components in seconds. But can it think like an engineer?",
     "platform": "Substack",
